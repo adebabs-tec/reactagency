@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'react-scroll/modules/components/Link'
 import logo from '../assets/Icon.png'
+import { FaXmark, FaBars } from 'react-icons/fa6'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -36,8 +37,14 @@ const Navbar = () => {
   ]
   return (
     <header className="w-full bg-white md:bg-transparent fixed top-0 left-o right-0">
-      <nav>
-        <div>
+      <nav
+        className={`py-4 lg:px-14 px-4 ${
+          isSticky
+            ? 'sticky top-0 left-0 right-0 border-b bg-white duration-300'
+            : ''
+        }`}
+      >
+        <div className="flex justify-between items-center text-base gap-8">
           <a
             href=""
             className="text-2xl font-semibold flex items-center space-x-1"
@@ -75,6 +82,20 @@ const Navbar = () => {
             </a>
             <button className="bg-brandPrimary text-white py-2 px-4 transition-all duration-300 rounded hover:bg-neutralDGrey">
               Sign up
+            </button>
+          </div>
+
+          {/* menu btn for only mobile devices */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="focus::outline-none focus::text-gray-500 text-neutralGrey"
+            >
+              {isMenuOpen ? (
+                <FaXmark className="w-6 h-6" />
+              ) : (
+                <FaBars className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>

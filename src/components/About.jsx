@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div>
       {/* about text  */}
-      <div className="px-4 lg:px-14 md:max-w-screen-2xl mx-auto my-8">
+      <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-8">
         <div className="md:w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
           <div>
             <img src={AboutImg} alt="" />
@@ -28,7 +28,7 @@ const About = () => {
         </div>
       </div>
       {/* company stats  */}
-      <div className="px-4 lg:px-14 md:max-w-screen-2xl mx-auto py-16 bg-neutralSilver">
+      <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto py-16 bg-neutralSilver">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="md:w-1/2">
             <h2 className="text-4xl text-neutralDGrey font-semibold mb-4 md:w-2/3">

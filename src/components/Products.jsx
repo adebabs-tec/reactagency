@@ -83,7 +83,10 @@ const Products = () => {
                     className="cursor-pointer"
                   />
                   <div>
-                    <a href="" className="font-bold text-brandPrimary">
+                    <a
+                      href=""
+                      className="font-bold text-brandPrimary hover:text-neutral-700"
+                    >
                       Meet all customers
                     </a>
                   </div>

@@ -29,57 +29,64 @@ const Products = () => {
       </div>
       <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto py-16 bg-neutralSilver">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="md:w-1/3">
-            <h2 className="text-4xl text-neutralDGrey font-semibold mb-4 md:w-2/3">
-              Helping a
-              <br />
-              <span className="text-brandPrimary">
-                business reinvent itself
-              </span>
-            </h2>
-            <p className="md:w-3/4 text-sm text-neutralGrey mb-8">
-              We reached here with our hard work and dedication
-            </p>
-          </div>
+          <div className="md:w-1/3"></div>
           {/* stats  */}
-          <div className="md:w-1/2 mx-auto flex sm:flex-row flex-col sm:items-center justify-around gap-12">
-            <div className="space-y-8">
-              <div className="flex items-center gap-4">
-                <img src="/src/assets/icons/member.png" alt="" />
+          <div className="md:w-2/3 mx-auto">
+            <div>
+              <p className="md:w-4/5 text-sm text-neutralGrey mb-8 leading-7">
+                Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
+                lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin
+                eu enim metus. Vivamus sed libero ornare, tristique quam in,
+                gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi
+                laoreet elit at ligula molestie, nec molestie mi blandit.
+                Suspendisse cursus tellus sed augue ultrices, quis tristique
+                nulla sodales. Suspendisse eget lorem eu turpis vestibulum
+                pretium. Suspendisse potenti. Quisque malesuada enim sapien,
+                vitae placerat ante feugiat eget. Quisque vulputate odio neque,
+                eget efficitur libero condimentum id. Curabitur id nibh id sem
+                dignissim finibus ac sit amet magna.
+              </p>
+              <h5 className="text-brandPrimary text-xl font-semibold mb-2">
+                Tim Smith
+              </h5>
+              <p>British Dragon Boat Racing Association</p>
+              <div>
                 <div>
-                  <h4 className="text-2xl text-neutralDGrey font-semibold">
-                    2,245,341
-                  </h4>
-                  <p>Members</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <img src="/src/assets/icons/event.png" alt="" />
-                <div>
-                  <h4 className="text-2xl text-neutralDGrey font-semibold">
-                    828,867
-                  </h4>
-                  <p>Event Bookings</p>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-8">
-              <div className="flex items-center gap-4">
-                <img src="/src/assets/icons/membershipPry.png" alt="" />
-                <div>
-                  <h4 className="text-2xl text-neutralDGrey font-semibold">
-                    46,328
-                  </h4>
-                  <p>Clubs</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <img src="/src/assets/icons/payment.png" alt="" />
-                <div>
-                  <h4 className="text-2xl text-neutralDGrey font-semibold">
-                    1,926,436
-                  </h4>
-                  <p>Payments</p>
+                  <img
+                    src="/src/assets/icons/company1.png"
+                    alt=""
+                    className="cursor-pointer"
+                  />
+                  <img
+                    src="/src/assets/icons/company2.png"
+                    alt=""
+                    className="cursor-pointer"
+                  />
+                  <img
+                    src="/src/assets/icons/company3.png"
+                    alt=""
+                    className="cursor-pointer"
+                  />
+                  <img
+                    src="/src/assets/icons/company4.png"
+                    alt=""
+                    className="cursor-pointer"
+                  />
+                  <img
+                    src="/src/assets/icons/company5.png"
+                    alt=""
+                    className="cursor-pointer"
+                  />
+                  <img
+                    src="/src/assets/icons/company6.png"
+                    alt=""
+                    className="cursor-pointer"
+                  />
+                  <div>
+                    <a href="" className="font-bold text-brandPrimary">
+                      Meet all customers
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

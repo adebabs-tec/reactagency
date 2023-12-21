@@ -1,8 +1,9 @@
 import AboutImg from '../assets/pana.png'
+import Maecenas from '../assets/maecenas.png'
 
 const Products = () => {
   return (
-    <div>
+    <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-8">
       <div className="md:w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
         <div>
           <img src={AboutImg} alt="" />
@@ -29,7 +30,9 @@ const Products = () => {
       </div>
       <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto py-16 bg-neutralSilver">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="md:w-1/3"></div>
+          <div className="md:w-1/3">
+            <img src={Maecenas} alt="" />
+          </div>
           {/* stats  */}
           <div className="md:w-2/3 mx-auto">
             <div>
@@ -49,9 +52,11 @@ const Products = () => {
               <h5 className="text-brandPrimary text-xl font-semibold mb-2">
                 Tim Smith
               </h5>
-              <p>British Dragon Boat Racing Association</p>
+              <p className="text-base text-neutralGrey mb-8">
+                British Dragon Boat Racing Association
+              </p>
               <div>
-                <div>
+                <div className="flex flex-wrap items-center gap-8">
                   <img
                     src="/src/assets/icons/company1.png"
                     alt=""
@@ -82,12 +87,25 @@ const Products = () => {
                     alt=""
                     className="cursor-pointer"
                   />
-                  <div>
+                  <div className="flex items-center gap-8">
                     <a
                       href=""
                       className="font-bold text-brandPrimary hover:text-neutral-700"
                     >
                       Meet all customers
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="17"
+                        height="11"
+                        viewBox="0 0 17 11"
+                        fill="none"
+                        className="inline-block ml-2"
+                      >
+                        <path
+                          d="M12 9.39905L15.2929 6.10615C15.6834 5.71563 15.6834 5.08246 15.2929 4.69194L12 1.39905M15 5.39905L1 5.39905"
+                          stroke="#4CAF4F"
+                        />
+                      </svg>
                     </a>
                   </div>
                 </div>

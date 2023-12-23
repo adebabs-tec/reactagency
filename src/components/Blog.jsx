@@ -18,7 +18,7 @@ const Blog = () => {
     },
   ]
   return (
-    <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-12">
+    <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-12" id="FAQ">
       <div className="text-center md:w-1/2 mx-auto">
         <h2 className="text-4xl text-neutralDGrey font-semibold mb-4">
           Caring is the new marketing
@@ -33,7 +33,11 @@ const Blog = () => {
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 items-center justify-between">
         {blogs.map((blog) => (
           <div key={blog.id} className="relative mx-auto cursor-pointer mb-12">
-            <img src={blog.img} alt="" className="hover:scale-95 duratio" />
+            <img
+              src={blog.img}
+              alt=""
+              className="hover:scale-95 duration-300 transition-all"
+            />
             <div className="text-center px-4 py-8 bg-white shadow-lg rounded-md md:w-3/4 mx-auto absolute left-0 right-0 -bottom-12">
               <h2 className="mb-3 text-neutralGrey font-semibold">
                 {blog.title}

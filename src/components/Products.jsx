@@ -3,7 +3,7 @@ import Maecenas from '../assets/maecenas.png'
 
 const Products = () => {
   return (
-    <>
+    <div id="Product">
       <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-8">
         <div className="md:w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
           <div>
@@ -30,7 +30,10 @@ const Products = () => {
           </div>
         </div>
       </div>
-      <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto bg-neutralSilver py-16">
+      <div
+        className="px-4 lg:px-14 max-w-screen-2xl mx-auto bg-neutralSilver py-16"
+        id="Testimonial"
+      >
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="md:w-1/3">
             <img src={Maecenas} alt="" />
@@ -116,7 +119,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

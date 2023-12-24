@@ -1,6 +1,13 @@
+import { motion } from 'framer-motion'
+import { fadeIn } from '../variants'
+
 const Newsletter = () => {
   return (
-    <div
+    <motion.div
+      variants={fadeIn('up', 0.2)}
+      initial={'hidden'}
+      whileInView={'show'}
+      viewport={{ once: false, amount: 0.5 }}
       className="px-4 lg:px-14 max-w-screen-2xl mx-auto bg-neutralSilver py-16"
       id="Newsletter"
     >
@@ -11,7 +18,7 @@ const Newsletter = () => {
           </h2>
           <div className="flex items-center justify-center gap-8">
             <button className="py-2 px-7 text-white rounded bg-brandPrimary hover:bg-neutralDGrey transition-all duration-300 hover:-translate-y-4">
-              Get a Demo{' '}
+              Get a Demo
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"
@@ -29,7 +36,7 @@ const Newsletter = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

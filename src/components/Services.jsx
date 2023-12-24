@@ -1,3 +1,6 @@
+import { motion } from 'framer-motion'
+import { fadeIn } from '../variants'
+
 const Services = () => {
   const services = [
     {
@@ -24,7 +27,13 @@ const Services = () => {
   ]
   return (
     <div className="md:px-14 px-4 py-16 max-w-screen-2xl mx-auto" id="Service">
-      <div className="text-center my-8">
+      <motion.div
+        variants={fadeIn('right', 0.2)}
+        initial={'hidden'}
+        whileInView={'show'}
+        viewport={{ once: false, amount: 0.7 }}
+        className="text-center my-8"
+      >
         <h2 className="text-4xl font-semibold text-neutralDGrey mb-2">
           Our Clients
         </h2>
@@ -42,18 +51,30 @@ const Services = () => {
           <img src="/src/assets/icons/company6.png" alt="" />
           <img src="/src/assets/icons/company7.png" alt="" />
         </div>
-      </div>
+      </motion.div>
 
       {/* services card  */}
-      <div className="mt-20 md:w-1/2 mx-auto text-center">
+      <motion.div
+        variants={fadeIn('left', 0.3)}
+        initial={'hidden'}
+        whileInView={'show'}
+        viewport={{ once: false, amount: 0.7 }}
+        className="mt-20 md:w-1/2 mx-auto text-center"
+      >
         <h2 className="text-4xl font-semibold text-neutralDGrey mb-3">
           Manage your entire community in a single system
         </h2>
         <p className="text-neutralGrey ">Who is Nextcent suitable for?</p>
-      </div>
+      </motion.div>
 
       {/* cards  */}
-      <div className="mt-14 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:w-11/12 mx-auto gap-12">
+      <motion.div
+        variants={fadeIn('up', 0.2)}
+        initial={'hidden'}
+        whileInView={'show'}
+        viewport={{ once: false, amount: 0.5 }}
+        className="mt-14 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:w-11/12 mx-auto gap-12"
+      >
         {services.map((service) => (
           <div
             key={service.id}
@@ -70,7 +91,7 @@ const Services = () => {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   )
 }

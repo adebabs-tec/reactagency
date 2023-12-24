@@ -1,15 +1,28 @@
 import AboutImg from '../assets/pana.png'
 import Maecenas from '../assets/maecenas.png'
+import { motion } from 'framer-motion'
+import { fadeIn } from '../variants'
 
 const Products = () => {
   return (
     <div id="Product">
       <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-8">
         <div className="md:w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
-          <div>
+          <motion.div
+            variants={fadeIn('right', 0.3)}
+            initial={'hidden'}
+            whileInView={'show'}
+            viewport={{ once: false, amount: 0.5 }}
+          >
             <img src={AboutImg} alt="" />
-          </div>
-          <div className="md:w-3/5 mx-auto">
+          </motion.div>
+          <motion.div
+            variants={fadeIn('left', 0.3)}
+            initial={'hidden'}
+            whileInView={'show'}
+            viewport={{ once: false, amount: 0.5 }}
+            className="md:w-3/5 mx-auto"
+          >
             <h2 className="text-4xl text-neutralDGrey font-semibold mb-4 md:w-4/5">
               How to design your site footer like we did
             </h2>
@@ -27,7 +40,7 @@ const Products = () => {
             <button className="py-2 px-7 text-white rounded bg-brandPrimary hover:bg-neutralDGrey transition-all duration-300 hover:-translate-y-4">
               Learn More
             </button>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div
@@ -35,11 +48,23 @@ const Products = () => {
         id="Testimonial"
       >
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="md:w-1/3">
+          <motion.div
+            variants={fadeIn('down', 0.2)}
+            initial={'hidden'}
+            whileInView={'show'}
+            viewport={{ once: false, amount: 0.5 }}
+            className="md:w-1/3"
+          >
             <img src={Maecenas} alt="" />
-          </div>
+          </motion.div>
           {/* stats  */}
-          <div className="md:w-2/3 mx-auto">
+          <motion.div
+            variants={fadeIn('up', 0.2)}
+            initial={'hidden'}
+            whileInView={'show'}
+            viewport={{ once: false, amount: 0.5 }}
+            className="md:w-2/3 mx-auto"
+          >
             <div>
               <p className="md:w-4/5 text-sm text-neutralGrey mb-8 leading-7">
                 Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
@@ -116,7 +141,7 @@ const Products = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

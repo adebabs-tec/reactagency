@@ -1,3 +1,6 @@
+import { motion } from 'framer-motion'
+import { fadeIn } from '../variants'
+
 const Blog = () => {
   const blogs = [
     {
@@ -19,7 +22,13 @@ const Blog = () => {
   ]
   return (
     <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-12" id="FAQ">
-      <div className="text-center md:w-1/2 mx-auto">
+      <motion.div
+        variants={fadeIn('right', 0.2)}
+        initial={'hidden'}
+        whileInView={'show'}
+        viewport={{ once: false, amount: 0.5 }}
+        className="text-center md:w-1/2 mx-auto"
+      >
         <h2 className="text-4xl text-neutralDGrey font-semibold mb-4">
           Caring is the new marketing
         </h2>
@@ -29,8 +38,14 @@ const Blog = () => {
           about how our community are increasing their membership income and
           lots more.
         </p>
-      </div>
-      <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 items-center justify-between">
+      </motion.div>
+      <motion.div
+        variants={fadeIn('left', 0.2)}
+        initial={'hidden'}
+        whileInView={'show'}
+        viewport={{ once: false, amount: 0.5 }}
+        className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 items-center justify-between"
+      >
         {blogs.map((blog) => (
           <div key={blog.id} className="relative mx-auto cursor-pointer mb-12">
             <img
@@ -66,7 +81,7 @@ const Blog = () => {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   )
 }
